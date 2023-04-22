@@ -6,7 +6,7 @@ import generatePasswordController from "../controllers/generatePasswordControlle
 const generatePasswordRouter = Router();
 
 generatePasswordRouter.post(
-  "/api/generate-password",
+  "/generate-password",
   validateSchemaMiddleware(passwordCreateDataSchema),
   generatePasswordController.createPassword
 );

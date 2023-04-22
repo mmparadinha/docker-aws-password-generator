@@ -8,7 +8,7 @@ services:
     env_file:
       - ./back-end/.env
     volumes:
-      - postgres-volume
+      - postgres-volume:/var/lib/postgresql/data
 
   node:
     container_name: node
@@ -24,7 +24,7 @@ services:
     build: ./front-end
     container_name: app_react
     volumes:
-      - build_react
+      - build_react:/var/www/html
 
   nginx:
     build: ./nginx

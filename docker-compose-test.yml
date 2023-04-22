@@ -6,9 +6,7 @@ services:
     ports:
       - 5433:5432
     env_file:
-      - ./back-end/.env
-    volumes:
-      - postgres-volume
+      - ./back-end/.env.test
 
   node:
     container_name: node
@@ -18,4 +16,4 @@ services:
     depends_on:
       - postgres
     env_file:
-      - ./back-end/.env
+      - ./back-end/.env.test

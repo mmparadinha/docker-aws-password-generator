@@ -32,7 +32,7 @@ services:
     ports:
       - 80:80
     volumes:
-      - build_react
+      - build_react:/var/www/html
     depends_on:
       - postgres
       - node
